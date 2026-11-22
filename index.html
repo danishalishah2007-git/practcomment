@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: gainsboro;
+            border: 2px solid black;
+            height: 100%;
+            width: 100%;
+        
+        }
+        h1{
+            color: rgb(42, 41, 41);
+            font-size: 50px;
+            font-weight: bold;
+        }
+        textarea{
+            font-size: 50px;
+            height: 50%;
+            width: 50%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        p{
+            font-size: 30px;
+            font-weight: bold;
+             color: rgb(42, 41, 41);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Leave a Comment</h1>
+    <textarea maxlength="100" placeholder="Write Something......" id="message"></textarea>
+    <p id="counter">0/100</p>
+    <script>
+        const message = document.getElementById("message");
+        const counter = document.getElementById("counter");
+        
+        message.addEventListener("input",function(){
+            counter.textContent = message.value.length + "/100"
+        });
+
+
+
+    </script>
+</body>
+</html>
